@@ -73,7 +73,7 @@ const SettingsScreen = ({ navigation }) => {
           }}>Ganti Password</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>      
+        <TouchableOpacity onPress={() => navigation.navigate('About')}>      
           <Text 
           style={{
           backgroundColor: '#4FABC8',
@@ -87,7 +87,16 @@ const SettingsScreen = ({ navigation }) => {
           marginTop: 10,
           marginLeft: 18,
           marginRight: 18
-          }}>Logout</Text>
+          }}>About</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            <Text
+            style={{ 
+            color: '#4FABC8',
+            fontSize: 16,
+            marginTop: 20,
+            textAlign: "center"
+            }}>Logout</Text>
         </TouchableOpacity>
       </View>
   );

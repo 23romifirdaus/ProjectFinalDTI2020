@@ -25,6 +25,7 @@ import SettingsScreen from './src/screen/SettingsScreen';
 import UbahProfileScreen from './src/screen/UbahProfileScreen';
 import KeluhanScreen from './src/screen/KeluhanScreen';
 import GantiPasswordScreen from './src/screen/GantiPasswordScreen';
+import AboutScreen from './src/screen/AboutScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -173,6 +174,23 @@ function GantiPasswordStack() {
   );
 }
 
+function AboutStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="About"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#4FABC8' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}>
+        <Stack.Screen
+          name="About"
+          component={AboutScreen}
+          options={{headerBackTitle: null}}/>
+      </Stack.Navigator>
+  );
+}
+
 function HomeTabs() {
   return (
 
@@ -202,7 +220,7 @@ function HomeTabs() {
                 options={{
                     title: "Settings",
                     tabBarIcon: (props) => (
-                        <IconBottom data={props} image={require('./src/img/icon_profile.png')} />
+                        <IconBottom data={props} image={require('./src/img/icon_settings.png')} />
                     )
                 }} />
     </Tab.Navigator>
@@ -228,6 +246,7 @@ function App() {
       <Stack.Screen name="UbahProfile" component={UbahProfileStack} options={{headerShown: false}}/>
       <Stack.Screen name="Keluhan" component={KeluhanStack} options={{headerShown: false}}/>
       <Stack.Screen name="GantiPassword" component={GantiPasswordStack} options={{headerShown: false}}/>
+      <Stack.Screen name="About" component={AboutStack} options={{headerShown: false}}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
