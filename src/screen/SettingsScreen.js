@@ -22,7 +22,7 @@ import CardView from 'react-native-cardview'
 const SettingsScreen = ({ navigation }) => {
   return (
       <View>      
-        <TouchableOpacity onPress={() => navigation.navigate('Registrasi')}>      
+        <TouchableOpacity onPress={() => navigation.navigate('UbahProfile')}>      
           <Text 
           style={{
           backgroundColor: '#4FABC8',
@@ -39,7 +39,7 @@ const SettingsScreen = ({ navigation }) => {
           }}>Ubah Profile</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Registrasi')}>      
+        <TouchableOpacity onPress={() => navigation.navigate('Keluhan')}>      
           <Text 
           style={{
           backgroundColor: '#4FABC8',
@@ -56,7 +56,7 @@ const SettingsScreen = ({ navigation }) => {
           }}>Lapor Keluhan</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Register')}>      
+        <TouchableOpacity onPress={() => navigation.navigate('GantiPassword')}>      
           <Text 
           style={{
           backgroundColor: '#4FABC8',

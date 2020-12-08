@@ -131,6 +131,7 @@ const RegistrasiScreen = ({ navigation }) => {
       />
       <TextInput
       placeholder="No. Handphone"
+      keyboardType='numeric'
       style={{
         height: 40,
         borderColor: '#A9A9A9', 

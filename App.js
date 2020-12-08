@@ -22,6 +22,9 @@ import RegistrasiScreen from './src/screen/RegistrasiScreen';
 import LoginScreen from './src/screen/LoginScreen';
 import HistoryScreen from './src/screen/HistoryScreen';
 import SettingsScreen from './src/screen/SettingsScreen';
+import UbahProfileScreen from './src/screen/UbahProfileScreen';
+import KeluhanScreen from './src/screen/KeluhanScreen';
+import GantiPasswordScreen from './src/screen/GantiPasswordScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -119,6 +122,57 @@ function SettingsStack() {
   );
 }
 
+function UbahProfileStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="UbahProfile"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#4FABC8' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}>
+        <Stack.Screen
+          name="Ubah Profile"
+          component={UbahProfileScreen}
+          options={{headerBackTitle: null}}/>
+      </Stack.Navigator>
+  );
+}
+
+function KeluhanStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="Keluhan"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#4FABC8' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}>
+        <Stack.Screen
+          name="Lapor Keluhan"
+          component={KeluhanScreen}
+          options={{headerBackTitle: null}}/>
+      </Stack.Navigator>
+  );
+}
+
+function GantiPasswordStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="GantiPassword"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#4FABC8' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}>
+        <Stack.Screen
+          name="Ganti Password"
+          component={GantiPasswordScreen}
+          options={{headerShown: false}}/>
+      </Stack.Navigator>
+  );
+}
+
 function HomeTabs() {
   return (
 
@@ -171,6 +225,9 @@ function App() {
           },
         }}/>
       <Stack.Screen name="Home" component={HomeTabs} options={{headerShown: false}}/>
+      <Stack.Screen name="UbahProfile" component={UbahProfileStack} options={{headerShown: false}}/>
+      <Stack.Screen name="Keluhan" component={KeluhanStack} options={{headerShown: false}}/>
+      <Stack.Screen name="GantiPassword" component={GantiPasswordStack} options={{headerShown: false}}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
